@@ -17,6 +17,6 @@ export default function ListePokemon() {
     };
     listeData();
   }, []);
-  console.log(pokemon);
+//   console.log(pokemon);
   return pokemon;
 }

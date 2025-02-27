@@ -1,0 +1,14 @@
+.BlogPokemon{
+    width: 300px;
+    height: 150px;
+    border-radius: 5px;
+
+    display: flex;
+    background-color: white;
+    color: blue;
+    
+}
+.h4{
+    background-color: black;
+    width: 100px;
+}
