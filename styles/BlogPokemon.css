@@ -8,7 +8,25 @@
     color: blue;
     
 }
-.h4{
-    background-color: black;
+.BlogPokemon P{
+    display: inline;
+    padding-left: 30px;
+}
+img{
+    height: 100px;
     width: 100px;
+}
+.image{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+
+    width: 100%;
+    /* border: 1px solid #000; */
+}
+.h4{
+    background-color: transparent;
+    color: rgb(225, 194, 39);
+    width: 100px;
+    padding-left: 10px;
 }

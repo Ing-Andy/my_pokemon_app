@@ -10,6 +10,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     list-style: none;
+    height: 100%;
     padding: 0;
 }
 .Header{
@@ -50,7 +51,7 @@
 }
 p{
     /* text-align: center; */
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
