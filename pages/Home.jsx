@@ -7,8 +7,7 @@ import '../styles/Home.css'
 export default function Home() {
         const listeData = ListePokemon();
         const [namePokemon,setNamePokemon] = useState([]) 
-        // console.log(namePokemon);
-        // console.log(listeData[0].name);
+        
         console.log(listeData);
         
         const [valeur,setValeur] = useState('');
@@ -32,7 +31,7 @@ return (
         {valeur === '' ? <ul className='ul'>
             
             {listeData.map((index) => (
-                <li key={index}><BlogPokemon nom={index.name} font={index.sprites.front_default} abilitie={index.abilities} image={index.sprites.other.dream_world.front_default}  /></li>
+                <li key={index}><BlogPokemon nom={index.name} level={index.order} font={index.sprites.front_default} type={index.types[0].type.name} image={index.sprites.other.dream_world.front_default}  /></li>
             ))}
         </ul> : <p> pas de pokemon de ce nom</p>}
     </div>

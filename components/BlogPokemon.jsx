@@ -1,12 +1,16 @@
 import React from 'react'
 import '../styles/BlogPokemon.css'
+import { Link, NavLink } from 'react-router-dom'
 
-export default function BlogPokemon({nom,image,font}) {
+
+export default function BlogPokemon({nom,type,level,image,font}) {
   return (
     <div className='BlogPokemon' style={{backgroundImage:`${font}`}}>
         <div>
-            <h4 className='h4'>{nom}</h4>
-            <p>{nom}</p>
+            <h3 className='h3'>{nom}</h3>
+            <p>type :{type} <br /> &nbsp;&nbsp;&nbsp;&nbsp; level : {level}
+            </p>
+        <h4 className='h4'><NavLink className='navlink' to={`/cadre`}>Details</NavLink></h4>
         </div>
         <div className='image'>
             <img src={image} alt=" image" />
