@@ -6,10 +6,8 @@ import '../styles/Home.css'
 
 export default function Home() {
         const listeData = ListePokemon();
+        const search = [];
         const [namePokemon,setNamePokemon] = useState([]) 
-        
-        console.log(listeData);
-        
         const [valeur,setValeur] = useState('');
         const handleChange = (event) => {
             setValeur(event.target.value);
@@ -19,6 +17,9 @@ export default function Home() {
             handleChange('');
             return valeur;
         }
+        const searchPokemon = listeData.filter((pokemon) => {
+            return pokemon.name.includes(valeur);
+        })
 return (
     <div className='Home'>
         <div className='Header' >
@@ -28,12 +29,11 @@ return (
                 <input className='submit' type="submit"  value="search" onClick={handleClick} />
             </div>
         </div>
-        {valeur === '' ? <ul className='ul'>
-            
-            {listeData.map((index) => (
+        <ul className='ul'>
+            {searchPokemon.map((index) => (
                 <li key={index}><BlogPokemon nom={index.name} level={index.order} font={index.sprites.front_default} type={index.types[0].type.name} image={index.sprites.other.dream_world.front_default}  /></li>
             ))}
-        </ul> : <p> pas de pokemon de ce nom</p>}
+        </ul>
     </div>
   )
 }

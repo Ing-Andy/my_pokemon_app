@@ -10,7 +10,7 @@ export default function BlogPokemon({nom,type,level,image,font}) {
             <h3 className='h3'>{nom}</h3>
             <p>type :{type} <br /> &nbsp;&nbsp;&nbsp;&nbsp; level : {level}
             </p>
-        <h4 className='h4'><NavLink className='navlink' to={`/cadre`}>Details</NavLink></h4>
+        <h4 className='h4'><NavLink className='navlink' to={`/profil`}>Details</NavLink></h4>
         </div>
         <div className='image'>
             <img src={image} alt=" image" />
