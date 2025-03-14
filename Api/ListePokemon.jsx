@@ -2,10 +2,12 @@
 import React, { useEffect, useState } from "react";
 
 export default function ListePokemon() {
+  
   const [pokemon, setPokemon] = useState([]);
+
   useEffect(() => {
     const listeData = async () => {
-      const data = await fetch("https://pokeapi.co/api/v2/pokemon");
+      const data = await fetch("https://pokeapi.co/api/v2/pokemon?limit=400");
       const liv = await data.json();
       const results = await Promise.all(
         liv.results.map(async (pokemon) => {
@@ -17,6 +19,5 @@ export default function ListePokemon() {
     };
     listeData();
   }, []);
-//   console.log(pokemon);
   return pokemon;
 }
