@@ -1,0 +1,39 @@
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header .searchdiv{
+    height: 30px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 255, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    width: 300px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 5px;
+}
+button{
+    height: 40px;
+    border: none;
+    background-color: blue;
+    color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    list-style: none;
+}
+h1{
+    color: blue;
+}
