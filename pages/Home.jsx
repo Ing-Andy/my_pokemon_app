@@ -10,7 +10,7 @@ export default function Home() {
     <div>
        {yo.map(pokemon => (
          <BlockPokemon nom={pokemon.name} type={pokemon.type} level={pokemon. level} image={pokemon.spreties.other.svg}  />
-       )}
+       ))}
     </div>
   )
 }
