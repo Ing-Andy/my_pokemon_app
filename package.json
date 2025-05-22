@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "lucide-react": "^0.482.0",
     "my_pokemon_app": "file:",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

@@ -1,14 +1,21 @@
 
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 import GetOnePokemon from "../Api/GetOnePokemon";
 import '../public/Profile.css'
 
 export default function Profile(){
     const { nom } = useParams()
     const { pokemon, loading, error } = GetOnePokemon(nom);
-  // if(loading) return <p>loading ....</p>
+    const [isclicked, setIsclicked] = useState(true)
   console.log(pokemon)
   
+  const onclick = (e) => {
+    setIsclicked(!isclicked)
+  }
+
+
   if (!pokemon) return <p>loading ......</p>;
 
   return(
@@ -22,7 +29,15 @@ export default function Profile(){
          </section>
          <section className = "section2">
             <div className="info1 info">
-                <p>vos info sont sense etre la</p>
+                {isclicked ? (
+                    <p>Abilititee :{pokemon.abilities[0].ability.name} <ChevronDown onClick={onclick}/></p>
+                ):(
+                    <>
+                        {pokemon.abilities.map((a,index) => (
+                            <p key={index}><span>Abilititee :</span><span>{a.ability.name} <ChevronUp onClick={onclick}/></span></p>
+                        ))}
+                    </>
+                )}
             </div>
             <div className="info2 info">
                 <p>vos states sont la </p>
